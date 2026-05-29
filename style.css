@@ -1,0 +1,354 @@
+/* ==========================================================================
+   1. CSS VARIABLES (Light/Dark Mode Theme)
+   ========================================================================== */
+:root {
+    --bg-color: #ffffff;
+    --bg-alt: #f8f9fa;
+    --text-color: #212529;
+    --text-muted: #6c757d;
+    --primary-color: #ff0000; /* YouTube Red */
+    --accent-color: #0073b1;  /* Clean Tech Blue */
+    --border-color: #e9ecef;
+    --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f141c;
+    --bg-alt: #161f2b;
+    --text-color: #e3e8ed;
+    --text-muted: #94a3b8;
+    --border-color: #243242;
+    --card-bg: #1a2432;
+}
+
+/* ==========================================================================
+   2. BASE RESETS & TYPOGRAPHY
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Utilities --- */
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo .accent {
+    color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--text-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
+.hero {
+    padding: 100px 0 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* --- Reusable Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: var(--bg-alt);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   5. LATEST VIDEO SECTION (Horizontal Layout)
+   ========================================================================== */
+.video-horizontal-card {
+    display: flex;
+    gap: 40px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 30px;
+    align-items: center;
+}
+
+.video-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.video-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.video-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.video-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.video-right h3 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.video-right p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.video-link-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+}
+
+.video-link-btn i {
+    margin-left: 8px;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. BLOG GRID SECTION
+   ========================================================================== */
+.blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.blog-card {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-card:last-child {
+    border-bottom: none;
+}
+
+.blog-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.blog-card h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.blog-card h3 a:hover {
+    color: var(--accent-color);
+}
+
+.blog-card p {
+    color: var(--text-muted);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    max-width: 800px;
+}
+
+.read-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   7. FOOTER SECTION
+   ========================================================================== */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--text-color);
+}
+
+/* ==========================================================================
+   8. MOBILE RESPONSIVENESS MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Main Layout Adapts */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    /* Video Row turns into a Vertical Stack */
+    .video-horizontal-card {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .video-left {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .video-right h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Footer shifts to stack centered */
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

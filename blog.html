@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Beyond SRE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="favicon.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-container">
+        <a href="index.html" class="logo"
+          >Beyond <span class="accent">SRE</span></a
+        >
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#videos">Videos</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+          </ul>
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section-padding" style="max-width: 750px">
+      <a
+        href="index.html#blog"
+        style="
+          text-decoration: none;
+          color: var(--accent-color);
+          font-weight: 500;
+        "
+        ><i class="fas fa-arrow-left"></i> Back to Blog List</a
+      >
+
+      <article style="margin-top: 30px">
+        <div
+          id="blog-date"
+          class="blog-meta"
+          style="font-size: 1rem; margin-bottom: 10px"
+        ></div>
+        <h1
+          id="blog-title"
+          style="font-size: 2.8rem; line-height: 1.2; margin-bottom: 30px"
+        ></h1>
+
+        <div
+          id="blog-body"
+          class="blog-post-content"
+          style="font-size: 1.15rem; line-height: 1.8"
+        ></div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>&copy; 2026 Beyond SRE. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://youtube.com" target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://github.com" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = urlParams.get("id");
+
+      const post = blogPosts.find((p) => p.id === postId);
+
+      if (post) {
+        document.title = `${post.title} | Beyond SRE`;
+        document.getElementById("blog-title").innerText = post.title;
+        document.getElementById("blog-date").innerText =
+          `${post.date} • ${post.readTime}`;
+        document.getElementById("blog-body").innerHTML = post.content;
+      } else {
+        document.getElementById("blog-title").innerText =
+          "404 - Article Not Found";
+        document.getElementById("blog-body").innerHTML =
+          "<p>Sorry, that article doesn't exist or has been moved.</p>";
+      }
+    </script>
+  </body>
+</html>
