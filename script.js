@@ -19,6 +19,108 @@ function updateIcon(theme) {
 
 const blogPosts = [
   {
+    id: "sre-post-2",
+    title: "SRE vs DevOps",
+    date: "May 31, 2026",
+    readTime: "10 min read",
+    excerpt:
+      "Want to understand 9 pillars of SRE in easy language? Follow along then",
+    content: `
+      <p>DevOps and Site Reliability Engineering (SRE) are often used interchangeably, but they are not the same thing.<br>
+Both aim to improve software delivery and operational excellence, yet they focus on different outcomes.<br>
+DevOps emphasizes collaboration and speed, while SRE emphasizes reliability and stability.<br>
+Here is a simple and professional explanation of how SRE differs from DevOps.</p>
+
+<br><hr><br>
+
+<h3>1. Philosophy vs Implementation | Different Foundations</h3>
+
+<p>DevOps is primarily a culture and set of practices designed to bring development and operations teams together.<br>
+It focuses on breaking down silos and improving collaboration across the software lifecycle.<br>
+SRE, on the other hand, is an engineering discipline that applies software engineering principles to operations.<br>
+In simple terms, DevOps is the philosophy, while SRE is one practical way to implement that philosophy.</p>
+
+<br>
+
+<h3>2. Speed vs Reliability | Different Priorities</h3>
+
+<p>DevOps aims to help organizations release software faster and more frequently.<br>
+The focus is on accelerating development, testing, and deployment processes.<br>
+SRE focuses on ensuring services remain stable and reliable even as deployments increase.<br>
+The goal is not only to move fast, but also to avoid breaking critical systems.</p>
+
+<br>
+
+<h3>3. Collaboration vs Reliability Engineering | Different Responsibilities</h3>
+
+<p>DevOps encourages developers and operations engineers to share responsibilities and work together.<br>
+The emphasis is on communication, automation, and shared ownership.<br>
+SRE teams specifically focus on reliability engineering, incident management, and system resilience.<br>
+Their responsibility is to ensure services meet defined reliability targets.</p>
+
+<br>
+
+<h3>4. CI/CD vs SLOs | Different Success Metrics</h3>
+
+<p>A DevOps team often measures success through deployment frequency, lead time, and automation maturity.<br>
+The objective is to deliver features to users as quickly as possible.<br>
+An SRE team measures success through Service Level Indicators (SLIs), Service Level Objectives (SLOs), and uptime targets.<br>
+The objective is to ensure users consistently receive a reliable service experience.</p>
+
+<br>
+
+<h3>5. Automation vs Toil Reduction | Different Goals for Automation</h3>
+
+<p>DevOps heavily promotes automation to accelerate software delivery pipelines.<br>
+Tasks such as testing, deployments, and infrastructure provisioning are automated.<br>
+SRE also values automation but focuses specifically on eliminating operational toil.<br>
+The goal is to reduce repetitive manual work and free engineers to solve complex reliability challenges.</p>
+
+<br>
+
+<h3>6. Continuous Delivery vs Error Budgets | Managing Change</h3>
+
+<p>DevOps encourages continuous delivery and frequent releases to bring value to users faster.<br>
+However, frequent deployments can introduce operational risk if reliability is not considered.<br>
+SRE manages this risk through error budgets that define an acceptable amount of failure.<br>
+If reliability falls below agreed thresholds, feature releases may be slowed until stability improves.</p>
+
+<br>
+
+<h3>7. Monitoring vs Observability | Understanding System Health</h3>
+
+<p>DevOps teams typically implement monitoring to track infrastructure and application metrics.<br>
+Monitoring helps identify whether systems are functioning correctly.<br>
+SRE goes further by embracing observability through metrics, logs, traces, and user experience data.<br>
+This enables engineers to understand not only what failed, but also why it failed.</p>
+
+<br>
+
+<h3>8. Deployment Ownership vs Incident Ownership | Different Operational Focus</h3>
+
+<p>DevOps teams often focus on deployment processes, infrastructure automation, and release management.<br>
+Their responsibility is to ensure software reaches production efficiently.<br>
+SRE teams take a leading role during production incidents and outages.<br>
+They focus on rapid recovery, root cause analysis, and preventing future occurrences.</p>
+
+<br>
+
+<h3>9. Shared Goal | Delivering Reliable Software Faster</h3>
+
+<p>Although DevOps and SRE have different focuses, they ultimately support the same business objective.<br>
+Both aim to improve customer experience and enable organizations to deliver high-quality software.<br>
+DevOps provides the practices and culture needed for speed and collaboration.<br>
+SRE provides the engineering discipline needed to maintain reliability at scale.</p>
+
+<br>
+
+<p>A simple way to summarize the difference is this:<br>
+DevOps asks, "How can we release software faster?"<br>
+SRE asks, "How can we release software faster without sacrificing reliability?"<br>
+Organizations that successfully adopt both approaches achieve the ideal balance between innovation, stability, and operational excellence.</p>
+        `,
+  },
+  {
     id: "sre-post-1",
     title: "Understanding 9 Pillars of SRE",
     date: "May 30, 2026",
