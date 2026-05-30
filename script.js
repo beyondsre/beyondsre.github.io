@@ -24,7 +24,7 @@ const blogPosts = [
     date: "May 31, 2026",
     readTime: "10 min read",
     excerpt:
-      "Want to understand 9 pillars of SRE in easy language? Follow along then",
+      "What are the real differences between SRE & DevOps",
     content: `
       <p>DevOps and Site Reliability Engineering (SRE) are often used interchangeably, but they are not the same thing.<br>
 Both aim to improve software delivery and operational excellence, yet they focus on different outcomes.<br>
